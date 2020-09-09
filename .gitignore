@@ -1,0 +1,11 @@
+
+*.jar
+*.MF
+*.properties
+*.lst
+*.class
+bookmgmt-client/target/
+bookmgmt-api/target/
+bookmgmt-doc/target/
+bookmgmt-server/target/
+bookmgmt-test/target/
