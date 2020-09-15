@@ -1,6 +1,7 @@
 package com.github.anjalipal.bookmgmt.controller;
 
-import org.springframework.boot.web.servlet.server.Session;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -31,6 +32,6 @@ public interface SessionController {
      *
      */
     @PostMapping(path = "/sessions/create/", produces = MediaType.APPLICATION_JSON_VALUE)
-    Session buildSession(String userName, String password);
+    String getSession(HttpSession session);
 
 }

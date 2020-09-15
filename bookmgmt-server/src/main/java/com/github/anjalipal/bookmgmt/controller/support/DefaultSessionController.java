@@ -1,6 +1,7 @@
 package com.github.anjalipal.bookmgmt.controller.support;
 
-import org.springframework.boot.web.servlet.server.Session;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Component;
 
 import com.github.anjalipal.bookmgmt.controller.SessionController;
@@ -9,8 +10,8 @@ import com.github.anjalipal.bookmgmt.controller.SessionController;
 public class DefaultSessionController implements SessionController {
 
     @Override
-    public Session buildSession(String userName, String password) {
-        return new Session();
+    public String getSession(HttpSession session) {
+        return session.getId();
     }
 
 }
